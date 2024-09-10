@@ -1,0 +1,182 @@
+* {
+   padding: 0;
+   margin: 0;
+}
+
+head {
+   background-color: #3D2E4F;
+}
+
+body {
+   background-color: #321D2F;
+
+   height: 100%;
+
+   display: flex;
+   flex-direction: column;
+
+}
+
+body>* {
+   flex-shrink: 0;
+}
+
+.banner {
+   display: flex;
+   background-color: #3D2E4F;
+   flex-grow: 1;
+   height: 300px;
+   font-size: 40px;
+   text-align: center;
+   align-items: center;
+   box-shadow: 0 10px 7px -10px #0D0E14;
+}
+
+#welcome {
+   margin: auto;
+   color: #B6BBC4;
+   text-shadow: 3px 3px 3px #252933;
+}
+
+.navbar {
+   display: flex;
+   flex-direction: row;
+   background-color: #3D2E4F;
+   width: 400px;
+   position: absolute;
+   margin-top: 10px;
+}
+
+#navlink {
+   margin: auto;
+   color: #4C5F7A;
+   float: left;
+   font-size: 20px;
+}
+
+#navlink_clicked {
+   margin: auto;
+   color: #B6BBC4;
+   float: left;
+}
+
+#navlink:hover {
+   transform: scale(1.1);
+}
+
+@keyframes navLoad {
+   0% {}
+
+   70% {
+      transform: scale(1.2);
+   }
+
+   100% {
+      transform: scale(1);
+   }
+}
+
+#widget-container {
+   text-align: center;
+}
+
+.widget-container-inner {
+   display: inline-block;
+}
+
+/* Define styles for the save icon */
+.save-icon {
+   width: 20px;
+   /* Set the width of the save icon */
+   height: 20px;
+   /* Set the height of the save icon */
+   position: absolute;
+   /* Position the save icon absolutely */
+   top: 10px;
+   /* Adjust the top position to align with the top of the widget */
+   left: 10px;
+   /* Adjust the left position to align with the left of the widget */
+   z-index: 1;
+   /* Ensure the save icon is above other content */
+}
+
+/* Style other widget elements */
+.widget {
+   position: relative;
+   /* Ensure the widget container is positioned relatively */
+   border: 1px solid #B6BBC4;
+   /* Add border to the widget container */
+   color: #B6BBC4;
+   /* Set text color for the widget */
+   padding: 20px;
+   /* Add padding to the widget container */
+   max-width: 800px;
+   /* Limit the maximum width of the widget */
+   max-height: 1200px;
+   /* Limit the maximum height of the widget */
+   margin: 10px;
+   /* Add margin around the widget */
+   margin-bottom: 0px;
+   /* Remove margin bottom to create space between widgets */
+   background-color: #3D2E4F;
+   /* Set background color for the widget */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   /* Add shadow effect to the widget */
+   overflow: hidden;
+   /* Ensure the widget content doesn't overflow */
+   display: block;
+   /* Change from inline-block to block */
+}
+
+.widget img {
+   width: auto;
+   /* Adjust the width of the image */
+   max-width: 100%;
+   /* Ensure the image fits within the container */
+   height: 600px;
+   /* Set a fixed height for the image */
+   margin: 10px auto 0;
+   /* Add margin around the image */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   /* Add shadow effect to the image */
+}
+
+.widget-description {
+   overflow: hidden;
+   /* Hide overflowing content */
+   white-space: nowrap;
+   /* Prevent text wrapping */
+   max-height: 1.5em;
+   /* Limit the maximum height of the description */
+   cursor: pointer;
+   /* Set cursor to indicate clickability */
+   transition: max-height 0.5s;
+   /* Add transition effect for smooth animation */
+}
+
+.widget-description.truncated {
+   text-overflow: ellipsis;
+   /* Add ellipsis for truncated text */
+   white-space: normal;
+   /* Allow text wrapping */
+   max-height: none;
+   /* Remove maximum height for expanded state */
+}
+
+.widget-toggle {
+   cursor: pointer;
+   /* Set cursor to indicate clickability */
+   color: blue;
+   /* Set color for the toggle text */
+   text-decoration: underline;
+   /* Add underline for the toggle text */
+}
+
+#yourfeed {
+   color: #B6BBC4;
+   /* Set color for the widget title */
+   font-size: 50px;
+   /* Set font size for the widget title */
+   text-shadow: 3px 3px 3px #252933;
+   /* Add text shadow for the widget title */
+}
